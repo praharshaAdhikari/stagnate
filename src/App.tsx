@@ -171,13 +171,13 @@ const App = (): JSX.Element => {
         {!timerOn && (
           <button
             type="submit"
-            className="my-12 px-24 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+            className="my-12 px-24 py-2 bg-blue-500 text-white text-center rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
           >
             start
           </button>
         )}
         {timerOn && (
-          <div className="my-12 px-24 py-2 bg-red-500 text-white rounded-md">
+          <div className="my-12 px-24 py-2 bg-red-500 text-white text-center rounded-md">
             the timer resets if any the site detects any interactions.
           </div>
         )}

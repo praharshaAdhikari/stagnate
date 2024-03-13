@@ -129,10 +129,16 @@ const App = (): JSX.Element => {
       </div>
       {/* Timer */}
       <form
-        className="flex flex-col justify-center items-center "
+        className={`flex flex-col justify-center items-center ${
+          timerOn ? `cursor-none` : ``
+        }`}
         onSubmit={handleSubmit}
       >
-        <div className="flex items-center font-orbitron">
+        <div
+          className={`flex items-center font-orbitron ${
+            timerOn ? `cursor-none` : ``
+          }`}
+        >
           <input
             type="text"
             id="minutes"
@@ -140,7 +146,9 @@ const App = (): JSX.Element => {
             value={minutes}
             onChange={handleMinutes}
             min="0"
-            className="appearance-none bg-transparent text-center w-36 text-stone-100 focus:outline-none text-7xl"
+            className={`appearance-none bg-transparent text-center w-36 text-stone-100 focus:outline-none text-7xl ${
+              timerOn ? `cursor-none` : ``
+            }`}
             disabled={timerOn}
           />
           <span>min</span>
@@ -153,7 +161,9 @@ const App = (): JSX.Element => {
             value={seconds}
             onChange={handleSeconds}
             min="0"
-            className="appearance-none bg-transparent text-center w-36 text-stone-100 focus:outline-none text-7xl"
+            className={`appearance-none bg-transparent text-center w-36 text-stone-100 focus:outline-none text-7xl ${
+              timerOn ? `cursor-none` : ``
+            }`}
             disabled={timerOn}
           />
           <span>sec</span>

@@ -111,7 +111,7 @@ const App = (): JSX.Element => {
 
   return (
     <div
-      className={`bg-stone-900 text-stone-100 font-sans font-medium w-screen h-screen p-8 flex flex-col justify-center items-center gap-16 ${
+      className={`bg-stone-900 text-stone-100 font-sans font-medium w-screen h-screen p-8 flex flex-col justify-center items-center gap-12 ${
         timerOn ? `cursor-none` : ``
       }`}
     >
@@ -125,7 +125,7 @@ const App = (): JSX.Element => {
           stagnate.
         </p>
         {/* Subheading */}
-        <p className="text-center">do nothing and reset your brain</p>
+        <p className="text-center">do nothing and reset your brain.</p>
       </div>
       {/* Timer */}
       <form

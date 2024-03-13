@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(28, 25, 23);
+}
+
+.offGradient {
+  color: #1464db;
+  background-image: -webkit-linear-gradient(
+    0deg,
+    #1464db 20%,
+    #2b88c2 50%,
+    #2ec7ab 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.onGradient {
+  color: #1464db;
+  background-image: -webkit-linear-gradient(
+    0deg,
+    #ee380a 20%,
+    #da2323 40%,
+    #c51515 80%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

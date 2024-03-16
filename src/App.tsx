@@ -5,12 +5,14 @@ const App = (): JSX.Element => {
   const [seconds, setSeconds] = useState<string>("00");
   const [timerOn, setTimerOn] = useState<boolean>(false);
 
+  // Handle Timer's Functions
   useEffect(() => {
     if (!timerOn) return;
     const timer = setInterval(() => handleTimer(), 1000);
     return () => clearInterval(timer);
   }, [timerOn, seconds, minutes]);
 
+  // Detect Interactions
   useEffect(() => {
     if (!timerOn) return;
 
@@ -31,6 +33,7 @@ const App = (): JSX.Element => {
     };
   }, [timerOn]);
 
+  // Start Timer
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (seconds == "00" && minutes == "00") return;
@@ -178,7 +181,7 @@ const App = (): JSX.Element => {
         )}
         {timerOn && (
           <div className="my-12 px-24 py-2 bg-red-500 text-white text-center rounded-md">
-            the timer resets if any the site detects any interactions.
+            the timer will reset if any interaction is detected.
           </div>
         )}
       </form>
